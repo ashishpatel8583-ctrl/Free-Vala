@@ -4,15 +4,11 @@ class script(object):
 
     FEATURES_TXT = """<b>ʜᴇʀᴇ ɪꜱ ᴀʟʟ ᴍʏ ꜰᴜɴᴛɪᴏɴꜱ.</b>"""
 
-    ABOUT_TXT = """<b>╭────[ ᴍʏ ᴅᴇᴛᴀɪʟs ]────⍟
-├⍟ ᴍʏ ɴᴀᴍᴇ : <a href=https://t.me/{}>{}</a>
-├⍟ ᴏᴡɴᴇʀ : <a href={}>ᴏᴡɴᴇʀ</a> 
-├⍟ ʟɪʙʀᴀʀʏ : <a href='https://docs.pyrogram.org/'>ᴘʏʀᴏɢʀᴀᴍ</a>
-├⍟ ʟᴀɴɢᴜᴀɢᴇ : <a href='https://www.python.org/download/releases/3.0/'>ᴘʏᴛʜᴏɴ 𝟹</a> 
-├⍟ ᴅᴀᴛᴀʙᴀꜱᴇ : <a href='https://www.mongodb.com/'>ᴍᴏɴɢᴏ ᴅʙ</a> 
-├⍟ ꜱᴇʀᴠᴇʀ : <a href='https://heroku.com/'>ʜᴇʀᴏᴋᴜ</a> 
-├⍟ ꜱᴛᴀᴛᴜꜱ : ᴠ4.8 [ ꜱᴛᴀʙʟᴇ ]
-╰───────────────⍟</b>"""
+    ABOUT_TXT = """<b>If your facing any problem with our bot and need help, So please contact Us
+
+ 🕛 Time : 8:AM To 10:PM
+
+  Only For Urgent Problems, No Timepass</b>"""
 
     FORCESUB_TEXT="""<b>
 👋 just 3 steps to get your file
