@@ -315,4 +315,4 @@ Requested by : {message.from_user.mention}</b>"""
 
     PAGE_TXT = """ᴡʜʏ ᴀʀᴇ ʏᴏᴜ ꜱᴏ ᴄᴜʀɪᴏᴜꜱ ⁉️"""    
    
-    SOURCE_TXT = """<b>contact admin :</b> 👇\nNeed help? Click the Source Code button to contact the admin."""
+    SOURCE_TXT = """<b>contact admin :</b> 👇\nNeed help? Then Contact Me Only."""
