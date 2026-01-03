@@ -239,14 +239,7 @@ Nᴀᴍᴇ : {}
 
 Mᴇꜱꜱᴀɢᴇ : <b>{}</b>"""
     
-    CAPTION = """<b>🚨 Eᴍᴇʀɢᴇɴᴄʏ!</b>
-
-<b>Dᴏᴡɴʟᴏᴀᴅ Aɴʏ Mᴏᴠɪᴇ Wɪᴛʜᴏᴜᴛ Aɴʏ Aᴅs 🔥</b>
-<b>Jᴜsᴛ Jᴏɪɴ Oᴜʀ Gʀᴏᴜᴘ ⤵️</b>
-
-⏤‌‌𝗝⌡𝗼𝗶𝗻 𝗣𝗿𝗲𝗺𝗶𝘂𝗺 - <a href="https://t.me/premiumbnda">[@premiumbnda]</a>
-
-🎬 <b>{file_name}</b>"""
+    CAPTION = """<b>{file_name}\nUploaded By: <a herf="https://t.me/SilentXBotz">[Morningfgfddgdf_Bistar]</a></b>"""
 
     IMDB_TEMPLATE_TXT = """
 <b>🏷 Title</b>: <a href={url}>{title}</a>
