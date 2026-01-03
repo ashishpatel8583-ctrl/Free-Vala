@@ -19,7 +19,7 @@ class script(object):
 
 1️⃣ Join our Cinema Area channel
 2️⃣ Tap “Try Again” after subscribing 
-3️⃣ Boom! your file will be sent instant 🎉📂
+3️⃣ Boom! your file will be sent instant 🎉
     </b>"""
            
     MULTI_STATUS_TXT = """<b>╭────[ ᴅᴀᴛᴀʙᴀsᴇ 1 ]────⍟</b>
@@ -239,7 +239,14 @@ Nᴀᴍᴇ : {}
 
 Mᴇꜱꜱᴀɢᴇ : <b>{}</b>"""
     
-    CAPTION = """<b>{file_name}\nUploaded By: <a herf="https://t.me/SilentXBotz">[Morning_Bistar]</a></b>"""
+    CAPTION = """<b>🚨 Eᴍᴇʀɢᴇɴᴄʏ!</b>
+
+<b>Dᴏᴡɴʟᴏᴀᴅ Aɴʏ Mᴏᴠɪᴇ Wɪᴛʜᴏᴜᴛ Aɴʏ Aᴅs 🔥</b>
+<b>Jᴜsᴛ Jᴏɪɴ Oᴜʀ Gʀᴏᴜᴘ ⤵️</b>
+
+⏤‌‌𝗝⌡𝗼𝗶𝗻 𝗣𝗿𝗲𝗺𝗶𝘂𝗺 - <a href="https://t.me/premiumbnda">[@premiumbnda]</a>
+
+🎬 <b>{file_name}</b>"""
 
     IMDB_TEMPLATE_TXT = """
 <b>🏷 Title</b>: <a href={url}>{title}</a>
