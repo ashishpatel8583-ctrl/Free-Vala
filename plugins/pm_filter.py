@@ -1340,7 +1340,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     
     elif query.data == "me":
         buttons = [[
-            InlineKeyboardButton ('🎁 sᴏᴜʀᴄᴇ', callback_data='source'),
+            InlineKeyboardButton ('🎁 CONTACT ADMIN', callback_data='source'),
         ],[
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ⇋', callback_data='start')
         ]]
@@ -1353,7 +1353,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         
     elif query.data == "source":
         buttons = [[
-            InlineKeyboardButton('ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ 📜', url='https://t.me/mrperfectjikabot'),
+            InlineKeyboardButton('ADMIN CONTACT 📜', url='https://t.me/mrperfectjikabot'),
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='me')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
