@@ -31,10 +31,10 @@ FSUB_IMG = (environ.get('FSUB_IMG', 'https://telegra.ph/SMDBOTZ-12-31-4')).split
 
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1982405151 7840839334').split()] 
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1003127102322').split()]
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-10036649675709'))  
-BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '  -10036649675709'))  
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1003649675709'))  
+BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '  -1003649675709'))  
 MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '-1003569663484'))  
-PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-10036649675709')) 
+PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1003649675709')) 
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 reqst_channel = environ.get('REQST_CHANNEL_ID', '-1003569663484') 
