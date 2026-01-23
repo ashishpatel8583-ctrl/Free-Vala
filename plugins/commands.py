@@ -100,7 +100,7 @@ async def start(client, message):
                     InlineKeyboardButton('🎟️ ᴜᴘɢʀᴀᴅᴇ', callback_data="premium"),
                 ],[
                     InlineKeyboardButton('♻️ ᴅᴍᴄᴀ', callback_data='disclaimer'),
-                    InlineKeyboardButton('👤 ᴀʙᴏᴜᴛ', callback_data='me')
+                    InlineKeyboardButton('👤 ᴀᴅᴍɪɴ', callback_data='me')
                 ],[
                     InlineKeyboardButton('🚫 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 🚫', callback_data="earn")
                 ]]
@@ -231,9 +231,9 @@ async def start(client, message):
                 else:
                     howtodownload = settings.get('tutorial_2', TUTORIAL_2) if is_second_shortener else settings.get('tutorial', TUTORIAL)
                 buttons = [[
-                    InlineKeyboardButton(text="♻️ ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴠᴇʀɪꜰʏ ♻️", url=verify)
+                    InlineKeyboardButton(text="♻️ ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ♻️", url=verify)
                 ],[
-                    InlineKeyboardButton(text="⁉️ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪꜰʏ ⁉️", url=howtodownload)
+                    InlineKeyboardButton(text="⁉️ ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ⁉️", url=howtodownload)
                 ]]
                 reply_markup=InlineKeyboardMarkup(buttons)
                 if await db.user_verified(user_id): 
