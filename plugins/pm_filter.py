@@ -910,7 +910,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('ʙᴜᴛᴛᴏɴ' if settings.get("button") else 'ᴛᴇxᴛ',
                                          callback_data=f'setgs#button#{settings.get("button")}#{str(grp_id)}')
                 ],
+                    InlineKeyboardButton('ꜰᴏʀᴄᴇ ꜱᴜʙꜱᴄʀɪʙᴇ',
+										 callback_data=f'setgs#forcesub#{settings["forcesub"]}#{str(grp_id)}'),
                 [
+				    InlineKeyboardButton('ᴇɴᴀʙʟᴇ' if settings["forcesub"] else 'ᴅɪꜱᴀʙʟᴇ',
+                                          callback_data=f'setgs#forcesub#{settings["forcesub"]}#{str(grp_id)}')
+                ],
+				[
                     InlineKeyboardButton('ꜰɪʟᴇ ꜱᴇᴄᴜʀᴇ',
                                          callback_data=f'setgs#file_secure#{settings["file_secure"]}#{str(grp_id)}'),
                     InlineKeyboardButton('ᴇɴᴀʙʟᴇ' if settings["file_secure"] else 'ᴅɪꜱᴀʙʟᴇ',
