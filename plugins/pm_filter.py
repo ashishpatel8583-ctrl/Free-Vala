@@ -49,7 +49,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 async def give_filter(client, message):
 
     # 🔹 5 second ignore / delay
-    await asyncio.sleep(10)
+    await asyncio.sleep(3)
 
     # Agar 5 second ke andar message delete ho gaya ho to stop
     try:
