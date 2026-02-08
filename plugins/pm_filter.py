@@ -39,12 +39,6 @@ FRESH = {}
 SPELL_CHECK = {}
 
 
-import asyncio
-import re
-import random
-from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client, message):
 
