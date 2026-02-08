@@ -39,27 +39,71 @@ FRESH = {}
 SPELL_CHECK = {}
 
 
+import asyncio
+import re
+import random
+from pyrogram import Client, filters
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client, message):
+
+    # 🔹 5 second ignore / delay
+    await asyncio.sleep(10)
+
+    # Agar 5 second ke andar message delete ho gaya ho to stop
+    try:
+        await message.get()
+    except:
+        return
+
+    # Emoji reaction
     if EMOJI_MODE:
         await message.react(emoji=random.choice(REACTIONS))
+
+    # Message log / stats
     await silentdb.update_top_messages(message.from_user.id, message.text)
+
+    # 🔹 Normal groups
     if message.chat.id != SUPPORT_CHAT_ID:
         settings = await get_settings(message.chat.id)
+
         if settings['auto_ffilter']:
+            # 🔗 Link detection
             if re.search(r'https?://\S+|www\.\S+|t\.me/\S+', message.text):
                 if await is_check_admin(client, message.chat.id, message.from_user.id):
                     return
-                return await message.delete()   
+                return await message.delete()
+
+            # Auto filter reply
             await auto_filter(client, message)
+
+    # 🔹 Support group logic
     else:
         search = message.text
-        temp_files, temp_offset, total_results = await get_search_results(chat_id=message.chat.id, query=search.lower(), offset=0, filter=True)
+
+        temp_files, temp_offset, total_results = await get_search_results(
+            chat_id=message.chat.id,
+            query=search.lower(),
+            offset=0,
+            filter=True
+        )
+
         if total_results == 0:
             return
-        else:
-            return await message.reply_text(f"<b>Hᴇʏ {message.from_user.mention},\n\nʏᴏᴜʀ ʀᴇǫᴜᴇꜱᴛ ɪꜱ ᴀʟʀᴇᴀᴅʏ ᴀᴠᴀɪʟᴀʙʟᴇ ✅\n\n📂 ꜰɪʟᴇꜱ ꜰᴏᴜɴᴅ : {str(total_results)}\n🔍 ꜱᴇᴀʀᴄʜ :</b> <code>{search}</code>\n\n<b>‼️ ᴛʜɪs ɪs ᴀ <u>sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ</u> sᴏ ᴛʜᴀᴛ ʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ғɪʟᴇs ғʀᴏᴍ ʜᴇʀᴇ...\n\n📝 ꜱᴇᴀʀᴄʜ ʜᴇʀᴇ : 👇</b>",   
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔍 ᴊᴏɪɴ ᴀɴᴅ ꜱᴇᴀʀᴄʜ ʜᴇʀᴇ 🔎", url=GRP_LNK)]]))
+
+        return await message.reply_text(
+            f"<b>Hᴇʏ {message.from_user.mention},\n\n"
+            f"ʏᴏᴜʀ ʀᴇǫᴜᴇꜱᴛ ɪꜱ ᴀʟʀᴇᴀᴅʏ ᴀᴠᴀɪʟᴀʙʟᴇ ✅\n\n"
+            f"📂 ꜰɪʟᴇꜱ ꜰᴏᴜɴᴅ : {total_results}\n"
+            f"🔍 ꜱᴇᴀʀᴄʜ :</b> <code>{search}</code>\n\n"
+            f"<b>‼️ ᴛʜɪs ɪs ᴀ <u>sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ</u> "
+            f"sᴏ ᴛʜᴀᴛ ʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ғɪʟᴇs ғʀᴏᴍ ʜᴇʀᴇ...\n\n"
+            f"📝 ꜱᴇᴀʀᴄʜ ʜᴇʀᴇ : 👇</b>",
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton("🔍 ᴊᴏɪɴ ᴀɴᴅ ꜱᴇᴀʀᴄʜ ʜᴇʀᴇ 🔎", url=GRP_LNK)]]
+            )
+        )
 
 
 @Client.on_message(filters.private & filters.text & filters.incoming)
