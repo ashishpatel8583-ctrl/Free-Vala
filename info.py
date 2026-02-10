@@ -37,7 +37,7 @@ MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '-1003569663484')
 PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1003649675709')) 
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
-reqst_channel = environ.get('REQST_CHANNEL_ID', '-1003569663484') 
+reqst_channel = environ.get('REQST_CHANNEL_ID', '') 
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1002851154596') 
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
@@ -55,8 +55,8 @@ CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/+jyw-yHhMQWs2MDc1')
 OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/mrperfectjikabot')
 UPDATE_CHANNEL_LNK = environ.get('UPDATE_CHANNEL_LNK', 'https://t.me/+Cgm91SVI5m1mODY1')
 
-AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', '-1003569663484'))
-AUTH_REQ_CHANNEL = int(environ.get('AUTH_REQ_CHANNEL', '-1003649675709'))
+AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', ''))
+AUTH_REQ_CHANNEL = int(environ.get('AUTH_REQ_CHANNEL', ''))
 
 IS_VERIFY = is_enabled('IS_VERIFY', True)
 LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '-1003383191711'))
