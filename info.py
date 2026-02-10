@@ -35,12 +35,13 @@ ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ
 # This Is Database Channel Link
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1003127102322').split()]
 
-# you can set log channel bin channel premium channel same id 
+# you can set same log channel id  in all of this fill in the blank 
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1003649675709'))  
 BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '  -1003649675709'))  
 PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1003649675709'))
 
-MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', ''))  
+# compersly need to fill 
+MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '-1003569663484'))  
  
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
