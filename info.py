@@ -22,12 +22,7 @@ BOT_TOKEN = environ.get('BOT_TOKEN', "")
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
-PICS = (environ.get('PICS', 'https://telegra.ph/SMDBOTZ-12-31-4')).split() 
-NOR_IMG = environ.get("NOR_IMG", "https://telegra.ph/SMDBOTZ-12-31-4")
-MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/e215d12bfd4fa2155e90e.mp4")
-SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/13702ae26fb05df52667c.jpg")
-SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://telegra.ph/file/f983d857f3ce40795e4b8.jpg'))
-FSUB_IMG = (environ.get('FSUB_IMG', 'https://telegra.ph/SMDBOTZ-12-31-4')).split() 
+
 
 # Bot Ka Admin
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1982405151 7840839334').split()] 
@@ -178,7 +173,8 @@ Bot_cmds = {
     "restart": "ʀᴇꜱᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ."
 }
 
-#Don't Change Anything Here
+# Dont Change Anything Hear 
+
 if MULTIPLE_DB == False:
     DATABASE_URI = DATABASE_URI
     DATABASE_URI2 = DATABASE_URI
@@ -187,11 +183,19 @@ else:
     DATABASE_URI2 = DATABASE_URI2
 
 
-# Dont Change Anything Hear 
-
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 reqst_channel = environ.get('REQST_CHANNEL_ID', '') 
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1002851154596') 
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
+
+
+# Dont Need To Change Image
+
+PICS = (environ.get('PICS', 'https://telegra.ph/SMDBOTZ-12-31-4')).split() 
+NOR_IMG = environ.get("NOR_IMG", "https://telegra.ph/SMDBOTZ-12-31-4")
+MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/e215d12bfd4fa2155e90e.mp4")
+SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/13702ae26fb05df52667c.jpg")
+SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://telegra.ph/file/f983d857f3ce40795e4b8.jpg'))
+FSUB_IMG = (environ.get('FSUB_IMG', 'https://telegra.ph/SMDBOTZ-12-31-4')).split() 
