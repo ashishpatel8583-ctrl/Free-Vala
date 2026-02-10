@@ -53,7 +53,7 @@ DATABASE_URI2 = environ.get('DATABASE_URI2', "")
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+uuFJAqVED45hOTRl')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/+jyw-yHhMQWs2MDc1')
 OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/mrperfectjikabot')
-UPDATE_CHANNEL_LNK = environ.get('UPDATE_CHANNEL_LNK', 'https://t.me/+8Kes2tN8I1NmOTll')
+UPDATE_CHANNEL_LNK = environ.get('UPDATE_CHANNEL_LNK', 'https://t.me/+vDrf9yVGLJ5hZTll')
 
 AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', '-1002459554188'))
 AUTH_REQ_CHANNEL = int(environ.get('AUTH_REQ_CHANNEL', '-1002843957435'))
