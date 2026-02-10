@@ -54,9 +54,14 @@ CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHAN
 
 
 
-DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://merchantnavy:merchantnavy@cluster0.19dbvu7.mongodb.net/?appName=Cluster0")
 
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://merchantnavy:merchantnavy@cluster0.19dbvu7.mongodb.net/?appName=Cluster0")
+DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'SilentXBotz_files')
+
+# If MULTIPLE_DB Is True Then Fill DATABASE_URI2 Value Else You Will Get Error.
+MULTIPLE_DB = is_enabled(os.environ.get('MULTIPLE_DB', "False"), False) # Type True For Turn On MULTIPLE DB FUNTION 
+DATABASE_URI2 = environ.get('DATABASE_URI2', "")
 
 SHORTENER_API = environ.get("SHORTENER_API", "bc9e90eb5dfdd6a3a7a6e61cef1e2e3de23b922f")
 SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", "shortxlinks.in")
@@ -201,8 +206,4 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
  
 
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'SilentXBotz_files')
 
-# If MULTIPLE_DB Is True Then Fill DATABASE_URI2 Value Else You Will Get Error.
-MULTIPLE_DB = is_enabled(os.environ.get('MULTIPLE_DB', "False"), False) # Type True For Turn On MULTIPLE DB FUNTION 
-DATABASE_URI2 = environ.get('DATABASE_URI2', "")
