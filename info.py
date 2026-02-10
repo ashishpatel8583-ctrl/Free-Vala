@@ -67,7 +67,7 @@ UPDATE_CHANNEL_LNK = environ.get('UPDATE_CHANNEL_LNK', 'https://t.me/+Cgm91SVI5m
 AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', '-1002459554188'))
 
 # Main Channel Ka id Doge To Channel Request Mode Me Convert Ho Jayega Nhi To Koi Faltu Different Id Dedo
-AUTH_REQ_CHANNEL = int(environ.get('AUTH_REQ_CHANNEL', ''))
+AUTH_REQ_CHANNEL = int(environ.get('AUTH_REQ_CHANNEL', '-1003569663484'))
 
 IS_VERIFY = is_enabled('IS_VERIFY', False)
 LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '-1003383191711'))
