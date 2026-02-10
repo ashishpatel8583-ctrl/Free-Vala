@@ -55,7 +55,7 @@ UPDATE_CHANNEL_LNK = environ.get('UPDATE_CHANNEL_LNK', 'https://t.me/+vDrf9yVGLJ
 # Force Subscribe Channel Pahle Vale Me doge To Normal Join Mode Dono Me Same Doge To Request Mode Normal Ke Liye Dusre Vale Me Update Channel Ka Id Do 
 
 AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', '-1002459554188'))
-AUTH_REQ_CHANNEL = int(environ.get('AUTH_REQ_CHANNEL', '-1002459554188'))
+AUTH_REQ_CHANNEL = int(environ.get('AUTH_REQ_CHANNEL', '-1002715836361'))
 
 ###############################################     Sᴛᴇᴘ Nᴏ 6     #################################################################################################
 #channel Vale me Database Channel ka id Dena Hai Bhai Log Koi bhi glti mt krna Aap Log
