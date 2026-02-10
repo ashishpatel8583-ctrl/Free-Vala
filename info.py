@@ -14,64 +14,49 @@ def is_enabled(value, default):
         return default
 
 
-SESSION = environ.get('SESSION', 'media_search')
-API_ID = int(environ.get('API_ID', '27194475'))
-API_HASH = environ.get('API_HASH', 'b9eaaeead349eb9c593bfe9ae04ded7d')
 BOT_TOKEN = environ.get('BOT_TOKEN', "")
+API_ID = int(environ.get('API_ID', '27194475'))
+SESSION = environ.get('SESSION', 'media_search')
+API_HASH = environ.get('API_HASH', 'b9eaaeead349eb9c593bfe9ae04ded7d')
 
-CACHE_TIME = int(environ.get('CACHE_TIME', 300))
-USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
+IS_VERIFY = is_enabled('IS_VERIFY', False)
+EMOJI_MODE = bool(environ.get('EMOJI_MODE', False))
+LINK_MODE = is_enabled((environ.get('LINK_MODE', "False")), True)
 
+# you can set same log channel id  in all of this fill in the blank
 
-
-# Bot Ka Admin
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1982405151 7840839334').split()] 
-
-# This Is Database Channel Link
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1003127102322').split()]
-
-# you can set same log channel id  in all of this fill in the blank 
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1003649675709'))  
 BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '  -1003649675709'))  
 PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1003649675709'))
 
-# compersly need to fill 
-MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '-1003569663484'))  
- 
+# koi verify karega to Notification yhi pr aayega Bhai Log Shamjhe
 
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://merchantnavy:merchantnavy@cluster0.19dbvu7.mongodb.net/?appName=Cluster0")
-DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'SilentXBotz_files')
-
-# If MULTIPLE_DB Is True Then Fill DATABASE_URI2 Value Else You Will Get Error.
-MULTIPLE_DB = is_enabled(os.environ.get('MULTIPLE_DB', "False"), False) # Type True For Turn On MULTIPLE DB FUNTION 
-DATABASE_URI2 = environ.get('DATABASE_URI2', "")
-
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+uuFJAqVED45hOTRl')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/+jyw-yHhMQWs2MDc1')
-OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/mrperfectjikabot')
-UPDATE_CHANNEL_LNK = environ.get('UPDATE_CHANNEL_LNK', 'https://t.me/+Cgm91SVI5m1mODY1')
-
-# Bot Ke Main Force Subscribe Channel Normal Join Mode Me
-AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', '-1002459554188'))
-
-# Main Channel Ka id Doge To Channel Request Mode Me Convert Ho Jayega Nhi To Koi Faltu Different Id Dedo
-AUTH_REQ_CHANNEL = int(environ.get('AUTH_REQ_CHANNEL', '-1002459554188'))
-
-
-
-
-
-
-
-IS_VERIFY = is_enabled('IS_VERIFY', False)
 LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '-1003383191711'))
 LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1003383191711'))
-VERIFY_IMG = environ.get("VERIFY_IMG", "https://telegra.ph/file/9ecc5d6e4df5b83424896.jpg")
 
+
+# Yha Pr Group Ka Link Dena Ye Jaruri Hau Bhai Log To Jarur Dena 
+
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+uuFJAqVED45hOTRl')
+OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/mrperfectjikabot')
 TUTORIAL = environ.get("TUTORIAL", "https://t.me/+sYYpPgyyOq03Mzhl")
 TUTORIAL_2 = environ.get("TUTORIAL_2", "https://t.me/+sYYpPgyyOq03Mzhl")
 TUTORIAL_3 = environ.get("TUTORIAL_3", "https://t.me/+sYYpPgyyOq03Mzhl")
+UPDATE_CHANNEL_LNK = environ.get('UPDATE_CHANNEL_LNK', 'https://t.me/+vDrf9yVGLJ5hZTll')
+
+
+AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', '-1002459554188'))
+AUTH_REQ_CHANNEL = int(environ.get('AUTH_REQ_CHANNEL', '-1002459554188'))
+
+
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1982405151 7840839334').split()] 
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1003127102322').split()]
+
+
+
+DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://merchantnavy:merchantnavy@cluster0.19dbvu7.mongodb.net/?appName=Cluster0")
+
 
 SHORTENER_API = environ.get("SHORTENER_API", "bc9e90eb5dfdd6a3a7a6e61cef1e2e3de23b922f")
 SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", "shortxlinks.in")
@@ -85,6 +70,18 @@ SHORTENER_WEBSITE3 = environ.get("SHORTENER_WEBSITE3", "shortxlinks.in")
 TWO_VERIFY_GAP = int(environ.get('TWO_VERIFY_GAP', "86450"))
 THREE_VERIFY_GAP = int(environ.get('THREE_VERIFY_GAP', "86450"))
 
+
+
+
+
+
+
+
+
+
+
+
+
 MOVIE_UPDATE_NOTIFICATION = bool(environ.get("MOVIE_UPDATE_NOTIFICATION", False))
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", True))
 MAX_B_TN = environ.get("MAX_B_TN", "8")
@@ -97,7 +94,6 @@ IMDB = is_enabled((environ.get('IMDB', "False")), False)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
 AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)
 DELETE_TIME = int(environ.get("DELETE_TIME", "60"))  
-LINK_MODE = is_enabled((environ.get('LINK_MODE', "False")), True)
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", f"{script.CAPTION}")
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", f"{script.IMDB_TEMPLATE_TXT}")
@@ -108,8 +104,7 @@ INDEX_REQ_CHANNEL = int(environ.get('-1002869967157',  -1002748763541))
 FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1002869967157')).split()]
 MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "False")), False)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), True)
-PM_SEARCH = bool(environ.get('PM_SEARCH', True)) 
-EMOJI_MODE = bool(environ.get('EMOJI_MODE', True)) 
+PM_SEARCH = bool(environ.get('PM_SEARCH', True))  
 PAID_STREAM = bool(environ.get('PAID_STREAM', False)) 
 
 LANGUAGES = ["malayalam", "", "tamil", "", "english", "", "hindi", "", "telugu", "", "kannada", "", "gujarati", "", "marathi", "", "punjabi", ""]
@@ -199,3 +194,15 @@ MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/e215d12bfd4fa2155
 SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/13702ae26fb05df52667c.jpg")
 SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://telegra.ph/file/f983d857f3ce40795e4b8.jpg'))
 FSUB_IMG = (environ.get('FSUB_IMG', 'https://telegra.ph/SMDBOTZ-12-31-4')).split() 
+VERIFY_IMG = environ.get("VERIFY_IMG", "https://telegra.ph/file/9ecc5d6e4df5b83424896.jpg")
+
+CACHE_TIME = int(environ.get('CACHE_TIME', 300))
+USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
+
+ 
+
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'SilentXBotz_files')
+
+# If MULTIPLE_DB Is True Then Fill DATABASE_URI2 Value Else You Will Get Error.
+MULTIPLE_DB = is_enabled(os.environ.get('MULTIPLE_DB', "False"), False) # Type True For Turn On MULTIPLE DB FUNTION 
+DATABASE_URI2 = environ.get('DATABASE_URI2', "")
