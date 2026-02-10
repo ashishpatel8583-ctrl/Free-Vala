@@ -24,19 +24,15 @@ EMOJI_MODE = bool(environ.get('EMOJI_MODE', False))
 LINK_MODE = is_enabled((environ.get('LINK_MODE', "False")), True)
 
 # you can set same log channel id  in all of this fill in the blank
-
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1003649675709'))  
 BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '  -1003649675709'))  
 PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1003649675709'))
 
 # koi verify karega to Notification yhi pr aayega Bhai Log Shamjhe
-
 LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '-1003383191711'))
 LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1003383191711'))
 
-
-# Yha Pr Group Ka Link Dena Ye Jaruri Hau Bhai Log To Jarur Dena 
-
+# Yha Pr Group Or Channel Ka Link Dena Ye Jaruri Hau Bhai Log To Jarur Dena 
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+uuFJAqVED45hOTRl')
 OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/mrperfectjikabot')
 TUTORIAL = environ.get("TUTORIAL", "https://t.me/+sYYpPgyyOq03Mzhl")
@@ -44,21 +40,15 @@ TUTORIAL_2 = environ.get("TUTORIAL_2", "https://t.me/+sYYpPgyyOq03Mzhl")
 TUTORIAL_3 = environ.get("TUTORIAL_3", "https://t.me/+sYYpPgyyOq03Mzhl")
 UPDATE_CHANNEL_LNK = environ.get('UPDATE_CHANNEL_LNK', 'https://t.me/+vDrf9yVGLJ5hZTll')
 
-
 AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', '-1002459554188'))
 AUTH_REQ_CHANNEL = int(environ.get('AUTH_REQ_CHANNEL', '-1002459554188'))
-
 
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1982405151 7840839334').split()] 
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1003127102322').split()]
 
-
-
-
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://merchantnavy:merchantnavy@cluster0.19dbvu7.mongodb.net/?appName=Cluster0")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'SilentXBotz_files')
-
 
 # If MULTIPLE_DB Is True Then Fill DATABASE_URI2 Value Else You Will Get Error.
 MULTIPLE_DB = is_enabled(os.environ.get('MULTIPLE_DB', "False"), False) # Type True For Turn On MULTIPLE DB FUNTION 
@@ -76,6 +66,12 @@ SHORTENER_WEBSITE3 = environ.get("SHORTENER_WEBSITE3", "shortxlinks.in")
 
 TWO_VERIFY_GAP = int(environ.get('TWO_VERIFY_GAP', "86450"))
 THREE_VERIFY_GAP = int(environ.get('THREE_VERIFY_GAP', "86450"))
+
+
+
+
+
+
 
 
 
