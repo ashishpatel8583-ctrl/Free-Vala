@@ -56,7 +56,7 @@ OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/mrperfectjikabot')
 UPDATE_CHANNEL_LNK = environ.get('UPDATE_CHANNEL_LNK', 'https://t.me/+Cgm91SVI5m1mODY1')
 
 AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', '-1003569663484'))
-AUTH_REQ_CHANNEL = int(environ.get('AUTH_REQ_CHANNEL', '-1003569663484'))
+AUTH_REQ_CHANNEL = int(environ.get('AUTH_REQ_CHANNEL', '-1003649675709'))
 
 IS_VERIFY = is_enabled('IS_VERIFY', True)
 LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '-1003383191711'))
