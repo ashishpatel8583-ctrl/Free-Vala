@@ -29,12 +29,19 @@ SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/13702ae26fb05df5266
 SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://telegra.ph/file/f983d857f3ce40795e4b8.jpg'))
 FSUB_IMG = (environ.get('FSUB_IMG', 'https://telegra.ph/SMDBOTZ-12-31-4')).split() 
 
+# Bot Ka Admin
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1982405151 7840839334').split()] 
+
+# This Is Database Channel Link
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1003127102322').split()]
+
+# you can set log channel bin channel premium channel same id 
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1003649675709'))  
-BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '  -1003791548813'))  
-MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '-1003569663484'))  
-PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1003649675709')) 
+BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '  -1003649675709'))  
+PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1003649675709'))
+
+MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', ''))  
+ 
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 reqst_channel = environ.get('REQST_CHANNEL_ID', '-1002459554188') 
@@ -42,7 +49,7 @@ REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_
 support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1002851154596') 
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
 
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://mmmmm:mmmmm@cluster0.miktpp.mongodb.net/?appName=Cluster0")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://merchantnavy:merchantnavy@cluster0.19dbvu7.mongodb.net/?appName=Cluster0")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'SilentXBotz_files')
 
