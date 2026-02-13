@@ -14,7 +14,7 @@ class script(object):
 👋 just 3 steps to get your file
 
 1️⃣ Join our channel
-2️⃣ Tap “Try Again” after subscribing 
+2️⃣ Tap “I Aᴍ Jᴏɪɴ” after Request 
 3️⃣ Boom! your file will be sent instant 🎉
     </b>"""
            
