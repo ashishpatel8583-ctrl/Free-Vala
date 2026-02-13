@@ -179,7 +179,7 @@ async def start(client, message):
                     InlineKeyboardButton("⛔️ ᴊᴏɪɴ ɴᴏᴡ ⛔️", url=invite_link.invite_link)
                 ]]
                 if message.command[1] != "subscribe":
-                    btn.append([InlineKeyboardButton("♻️ ᴛʀʏ ᴀɢᴀɪɴ ♻️", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
+                    btn.append([InlineKeyboardButton("♻️ I Aᴍ Jᴏɪɴ ♻️", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
                 await client.send_photo(
                     chat_id=message.from_user.id,
                     photo=random.choice(FSUB_IMG),
