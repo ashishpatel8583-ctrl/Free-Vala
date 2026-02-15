@@ -236,7 +236,7 @@ Mᴇꜱꜱᴀɢᴇ : <b>{}</b>"""
 <b>Dᴏᴡɴʟᴏᴀᴅ Aɴʏ Mᴏᴠɪᴇ Wɪᴛʜᴏᴜᴛ Aɴʏ Aᴅs  🔥</b>
 <b>Jᴜsᴛ Jᴏɪɴ Oᴜʀ Gʀᴏᴜᴘ ⤵️</b>
 
-⏤‌‌𝗝⌡𝗼𝗶𝗻 𝗣𝗿𝗲𝗺𝗶𝘂𝗺  <a href='https://t.me/+OEb5ANO9PW42NDJl'>ᴍᴏᴠɪᴇꜱ ɢʀᴏᴜᴘ</a>
+⏤‌‌𝗝⌡𝗼𝗶𝗻 𝗣𝗿𝗲𝗺𝗶𝘂𝗺  <a href='https://t.me/+pC8V6iRpFvExMzBl'>Hᴏᴡ Tᴏ Rᴇᴍᴏᴠᴇ Tʜᴇ Tɪᴍᴇ Lɪᴍɪᴛ</a>
 
 🎬 <b>{file_name}</b>"""
 
